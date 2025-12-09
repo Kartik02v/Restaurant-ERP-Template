@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // Import Link component
 
 export default function HeroSection() {
   return (
@@ -17,9 +18,13 @@ export default function HeroSection() {
               flavors where every dish tells a story.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-8 py-4 text-base font-bold uppercase tracking-widest text-white shadow-md transition-shadow hover:shadow-xl">
+              {/* MODIFIED: Changed button to Link and added href="/customer/menu" */}
+              <Link
+                href="/customer/menu"
+                className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-8 py-4 text-base font-bold uppercase tracking-widest text-white shadow-md transition-shadow hover:shadow-xl"
+              >
                 <span className="truncate">View Full Menu</span>
-              </button>
+              </Link>
               <button className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-gray-100 px-8 py-4 text-base font-bold uppercase tracking-widest text-heading shadow-md transition-shadow hover:shadow-xl dark:bg-gray-800 dark:text-white">
                 <span className="truncate">Reserve a Table</span>
               </button>
@@ -39,4 +44,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
