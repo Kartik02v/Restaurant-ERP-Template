@@ -20,8 +20,8 @@ export default function LoginPage() {
     e.preventDefault();
     if (selectedRole && email && password) {
       if (selectedRole === "customer") router.push("/");
-      if (selectedRole === "manager") router.push("/manager/dashboard");
-      if (selectedRole === "waiter") router.push("/waiter/dashboard");
+      if (selectedRole === "manager") router.push("/manager");
+      if (selectedRole === "waiter") router.push("/waiter");
     }
   };
 
